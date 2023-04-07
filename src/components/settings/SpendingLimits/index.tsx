@@ -39,7 +39,11 @@ const SpendingLimits = () => {
           )}
         </Grid>
       </Grid>
-      <SpendingLimitsTable isLoading={spendingLimitsLoading} spendingLimits={spendingLimits} />
+
+      {isEnabled? (
+        <SpendingLimitsTable isLoading={spendingLimitsLoading} spendingLimits={spendingLimits} />
+      ) : null}
+      
     </Paper>
   )
 }
